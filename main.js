@@ -6,44 +6,52 @@ Scott Estrada	Developer	scott-estrada-developer.jpg
 Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg*/
 
 
-const teams=[
+const team=[
     {
         nome:"Wayne Barnett",
         ruolo:"Founder & CEO",
-        foto:"wayne-barnett-founder-ceo.jpg"
+        foto:"wayne-barnett-founder-ceo.jpg",
 
     },
     {
         nome:"Angela Caroll",
         ruolo:"Chief Editor",
-        foto:"angela-caroll-chief-editor.jpg"
+        foto:"angela-caroll-chief-editor.jpg",
 
     },
     {
         nome:"Walter Gordon",
         ruolo:"Office Manager",
-        foto:"walter-gordon-office-manager.jpg"
+        foto:"walter-gordon-office-manager.jpg",
 
     },
     {
         nome:"Angela Lopez",
         ruolo:"Social Media Manager",
-        foto:"angela-lopez-social-media-manager.jpg"
+        foto:"angela-lopez-social-media-manager.jpg",
 
     },
     {
         nome:"Scott Estrada",
         ruolo:"Developer",
-        foto:"scott-estrada-developer.jpg"
+        foto:"scott-estrada-developer.jpg",
 
     },
     {
         nome:"Barbara Ramos",
         ruolo:"Graphic Designer",
-        foto:"barbara-ramos-graphic-designer.jpg"
+        foto:"barbara-ramos-graphic-designer.jpg",
 
     }
-]
-console.log(teams)
+];
 
 
+let infoHtml= document.getElementById(`info`)
+
+
+for(let i = 0; i < team.length; i++){
+
+for (const Key in team[i] ){
+    infoHtml.innerHTML += `<p>${team[i][Key]}</p>`
+}
+}
